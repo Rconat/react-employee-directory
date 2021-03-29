@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Avatar = () => {
+const Avatar = ({ picture }) => {
     return <div>Avatar</div>
 }
 
