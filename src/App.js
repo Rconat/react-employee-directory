@@ -8,6 +8,8 @@ import Filter from './components/Filter'
 import Header from './components/Header'
 import Sort from './components/Sort'
 
+// https://randomuser.me/api/?results=25
+// this is the api call for 25 random users
 
 function App() {
   const [user, setUser] = useState({})
@@ -17,15 +19,15 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <header className="App-header">
-        <Sort />
-        <Filter 
-          filter = {filter} 
-          setFilter = {setFilter}
-        />
-        <Avatar />
-        <Details />
-      </header>
+        <header className="App-header">
+          <Sort />
+          <Filter 
+            filter = {filter} 
+            setFilter = {setFilter}
+          />
+          <Avatar />
+          <Details />
+        </header>
     </div>
   );
 }
