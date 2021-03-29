@@ -11,13 +11,18 @@ import Sort from './components/Sort'
 
 function App() {
   const [user, setUser] = useState({})
+  const [filter, setFilter] = useState('')
+  const [sort, setSort] = useState('')
 
   return (
     <div className="App">
+      <Header />
       <header className="App-header">
-        <Header />
         <Sort />
-        <Filter />
+        <Filter 
+          filter = {filter} 
+          setFilter = {setFilter}
+        />
         <Avatar />
         <Details />
       </header>
