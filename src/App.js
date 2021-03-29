@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { Component } from 'react'
 import axios from 'axios'
 import './App.css';
 
@@ -14,42 +14,39 @@ import EmployeeGrid from './components/EmployeeGrid'
 // https://randomuser.me/api/?results=25
 // this is the api call for 25 random users
 
-function App() {
-  const [employees, setEmployees] = useState({})
-  // const [filter, setFilter] = useState('')
-  // const [sort, setSort] = useState('')
+class App extends Component {
 
-  // useEffect(() => fetchEmployees(). [])
-
-  const fetchEmployees = async () => {
-    try {
-      const { data } = await axios(`https://randomuser.me/api/?results=25`)
-      console.log(data.results)
-
-      setEmployees(data.results)
-    }
-    catch {
-      alert ('No data found')
-    }
+  state = {
+    results: []
   }
 
-  // fetchEmployees()
+  componentDidMount() {
+    console.log('component mounted')
+    axios(`https://randomuser.me/api/?results=25`)
+      .then(response => this.setState ({ results: response.data.results }))
+      .catch(err => console.error(err))
+  }
 
-  return (
-    <div className="App">
-      <Header />
-        <header className="App-header">
-          <Grid>
-            <Sort />
-            <Filter />
-          </Grid>
-          <EmployeeGrid>
-            <Avatar {...employees}/>
-            <Details {...employees}/>
-          </EmployeeGrid>
-        </header>
-    </div>
-  );
+  render() {
+
+    console.log(this.state.results)
+
+    return (
+      <div className="App">
+        <Header />
+          <header className="App-header">
+            <Grid>
+              <Sort />
+              <Filter />
+            </Grid>
+            <EmployeeGrid>
+              <Avatar results = {this.state.results}/>
+              <Details results = {this.state.results}/>
+            </EmployeeGrid>
+          </header>
+      </div>
+    );
+  }
 }
 
 export default App;

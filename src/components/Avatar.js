@@ -1,7 +1,9 @@
 import React from 'react'
 
-const Avatar = ({ picture }) => {
-    return <div>Avatar</div>
+const Avatar = props => {
+    return props.results.map(result => (
+        <img src={result.picture.medium} alt={result.name.first} key={result.login.uuid}/>
+    ))
 }
 
 export default Avatar
