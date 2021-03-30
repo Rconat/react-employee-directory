@@ -8,6 +8,7 @@ import Header from './components/Header'
 import Sort from './components/Sort'
 import Grid from './components/Grid'
 import Employees from './components/Employees'
+import GridHeader from './components/GridHeader';
 
 // https://randomuser.me/api/?results=25
 // this is the api call for 25 random users
@@ -37,6 +38,7 @@ class App extends Component {
               <Sort />
               <Filter />
             </Grid>
+            <GridHeader />
             <Employees results = {this.state.results} />
           </header>
       </div>
