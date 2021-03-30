@@ -12,6 +12,9 @@ width: 100px;
 margin: 20px;
 background-color: #5EAAA8; 
 padding: 4px;
+&:hover {
+  background-color: #A3D2CA;
+}
 `
 
 const Filter = ({ filter, setFilter }) => {
