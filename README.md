@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# React Empoloyee Directory
+## Description 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The purpose of this project is to create an Employee Directory using react components. The application must also manage component state and respond to user events
 
-## Available Scripts
 
-In the project directory, you can run:
+The webpage is hosted on [GitHub](https://rconat.github.io/react-employee-directory/).
 
-### `npm start`
+You can find the repo on [GitHub](https://github.com/Rconat/react-employee-directory).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Website Layout](public/main.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Table of Contents
 
-### `npm test`
+* [Installation](#Installation)
+* [List of Files](#List-of-Files)
+* [React JavaScript Library](#React-JavaScript-Library)
+* [Random User Generator API](#Random-User-Generator-API)
+* [List of Files](#List-of-Files)
+* [Usage](#Usage)
+* [Credits](#Credits)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+This application requires axios and styled-components. Install them with the following code.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    npm i axios styled-components
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## List of Files
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<ul>
+    <li>index.html</li>
+    <li>favicon.ico</li>
+    <li>manifest.json</li>
+    <li>Employees.js</li>
+    <li>Filter.js</li>
+    <li>Grid.js</li>
+    <li>GridHeader.js</li>
+    <li>Header.js</li>
+    <li>Sort.js</li>
+    <li>App.css</li>
+    <li>App.js</li>
+    <li>App.test.js</li>
+    <li>index.css</li>
+    <li>index.js</li>
+    <li>reportWebVitals.js</li>
+    <li>setupTests.js</li>
+    <li>.gitignore</li>
+    <li>package-lock.json</li>
+    <li>package.json</li>
+    <li>README.md</li>
+    <li>main.png</li>
+</ul>
 
-### `npm run eject`
+## React JavaScript Library
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+React is a JavaScript library used primarily for building user interfaces. React is component based meaning that the application is broken down into multiple components which are the updated using the component state. This allows for the application to refresh small sections rather than updating the entire application when re-rending information. This provides a smoother user experience. For more information visit the [React documentation](https://reactjs.org/).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Random User Generator API
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+This application uses the Random User API. This API allows us to generate random use information which will be used throughout the Employee Directory Application. The data exists in an object which is obtained through a get call using axios. For more information about this api visit the [Random User API Documentation](https://randomuser.me/).
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Usage 
 
-## Learn More
+This application is available to any user who wishes to make an Employee Directory for their own company. Since they application uses fake data with the Random User API, it does not have any use outside of giving a basic structure and layout as well as functionality that someone may want to impliment into their own Employee Directory. Instead of calling out to the Random User API, they would be able to do a call to a database of employees on a company server but keep the same functionality for an easy repurpose of the source code. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Credits
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Working alongside professors and TAs through Trinity and Northwestern Coding Bootcamp to provide the assignment parameters for this applicaiton.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[![Read the Docs](https://readthedocs.org/projects/yt2mp3/badge/?version=latest)](https://yt2mp3.readthedocs.io/en/latest/?badge=latest)
+[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat)]()
