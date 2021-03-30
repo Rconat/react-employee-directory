@@ -1,4 +1,4 @@
-import { Component, useState, useEffect } from 'react'
+import { Component } from 'react'
 import axios from 'axios'
 import './App.css';
 
@@ -16,25 +16,31 @@ import GridHeader from './components/GridHeader';
 class App extends Component {
 
   state = {
-    results: []
+    results: [],
+    displayedResults: []
   }
 
   componentDidMount() {
     console.log('component mounted')
     axios(`https://randomuser.me/api/?results=25`)
-      .then(response => this.setState ({ results: response.data.results }))
+      .then(response => this.setState ({ results: response.data.results, displayedResults: response.data.results }))
       .catch(err => console.error(err))
   }
 
   // on click filter the results to return all users from United States
   localEmployees = (evt) => {
-    
+    const locals = this.state.results.filter(({ location }) => location.country === 'United States')
+    // console.log all remote employees
+    console.log('local employees - ', locals)
+    this.setState({ displayedResults: locals })
   }
   
   // on click filter the results to return all users from outside of the United States
   remoteEmployees = (evt) => {
-
-
+    const remotes = this.state.results.filter(({ location }) => location.country !== 'United States')
+    // console.log all remote employees
+    console.log('remote employees - ', remotes)
+    this.setState({ displayedResults: remotes })
   }
 
   render() {
@@ -53,7 +59,7 @@ class App extends Component {
               />
             </Grid>
             <GridHeader />
-            <Employees results = {this.state.results} />
+            <Employees displayedResults = {this.state.displayedResults} />
           </header>
       </div>
     );

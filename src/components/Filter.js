@@ -25,7 +25,7 @@ const Filter = props => {
     <div className="btn-div">
       <Btn
         className="local"
-        onClick={props.localEmployees}  
+        onClick={props.localEmployees}
       >Local</Btn>
       <Btn 
         className="remote"

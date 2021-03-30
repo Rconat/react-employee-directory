@@ -26,7 +26,7 @@ const Col = styled.div`
 
 const Employees = props => {
     return(
-        props.results.map(result => (
+        props.displayedResults.map(result => (
             <Grid key={result.login.uuid}>
                 <Row>
                     <img src={result.picture.large} alt={result.name.first} key={result.login.uuid}/>
