@@ -3,13 +3,11 @@ import axios from 'axios'
 import './App.css';
 
 // importing components
-import Avatar from './components/Avatar'
-import Details from './components/Details'
 import Filter from './components/Filter'
 import Header from './components/Header'
 import Sort from './components/Sort'
 import Grid from './components/Grid'
-import EmployeeGrid from './components/EmployeeGrid'
+import Employees from './components/Employees'
 
 // https://randomuser.me/api/?results=25
 // this is the api call for 25 random users
@@ -39,10 +37,7 @@ class App extends Component {
               <Sort />
               <Filter />
             </Grid>
-            <EmployeeGrid>
-              <Avatar results = {this.state.results}/>
-              <Details results = {this.state.results}/>
-            </EmployeeGrid>
+            <Employees results = {this.state.results} />
           </header>
       </div>
     );
