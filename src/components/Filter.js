@@ -1,60 +1,29 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-class Filter extends Component {
-    constructor() {
-        super();
-        
-        this.state = {
-          showMenu: false,
-        }
+const Btn = styled.button `
+font-weight: bold;
+color: #F8F1F1;
+text-align: center;
+font-size: 16px;
+display: inline-block;
+margin: auto;
+width: 100px;
+margin: 20px;
+background-color: #5EAAA8; 
+padding: 4px;
+`
 
-        this.showMenu = this.showMenu.bind(this);
-      }
-
-      showMenu(event) {
-          event.preventDefault();
-
-          this.setState({
-              showMenu: true,
-          })
-      }
-
-    render() {
-        return (
-          <div>
-            <button onClick={this.showMenu}>
-              Location
-            </button>
-
-            {
-                this.state.showMenu
-                ? (
-                <div className="menu">
-                    <button> Local </button>
-                    <button> Remote </button>
-                </div>
-                )
-                : (
-                    null
-                )
-            }
-
-          </div>
-        );
-      }
+const Filter = ({ filter, setFilter }) => {
+    return <div className="dd-wrapper">
+    <div className="header">
+      <div className="title">Location</div>
+    </div>
+    <div className="btn-div">
+      <Btn className="local">Local</Btn>
+      <Btn className="remote">Remote</Btn>
+    </div>
+  </div>
 }
-
-// const Filter = ({ filter, setFilter }) => {
-//     return <div className="dd-wrapper">
-//     <div className="dd-header">
-//       <div className="dd-header-title">Location</div>
-//     </div>
-//     <div className="dd-list">
-//       <button className="dd-list-item">Local</button>
-//       <button className="dd-list-item">Remote</button>
-//     </div>
-//   </div>
-// }
 
 export default Filter
