@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import { Component, useState, useEffect } from 'react'
 import axios from 'axios'
 import './App.css';
 
@@ -26,6 +26,17 @@ class App extends Component {
       .catch(err => console.error(err))
   }
 
+  // on click filter the results to return all users from United States
+  localEmployees = (evt) => {
+    
+  }
+  
+  // on click filter the results to return all users from outside of the United States
+  remoteEmployees = (evt) => {
+
+
+  }
+
   render() {
 
     console.log(this.state.results)
@@ -36,7 +47,10 @@ class App extends Component {
           <header className="App-header">
             <Grid>
               <Sort />
-              <Filter />
+              <Filter 
+                localEmployees={this.localEmployees}
+                remoteEmployees={this.remoteEmployees}
+              />
             </Grid>
             <GridHeader />
             <Employees results = {this.state.results} />

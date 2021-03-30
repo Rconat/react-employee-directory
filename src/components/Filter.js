@@ -17,14 +17,20 @@ padding: 4px;
 }
 `
 
-const Filter = ({ filter, setFilter }) => {
-    return <div className="dd-wrapper">
+const Filter = props => {
+    return <div className="wrapper">
     <div className="header">
       <div className="title">Location</div>
     </div>
     <div className="btn-div">
-      <Btn className="local">Local</Btn>
-      <Btn className="remote">Remote</Btn>
+      <Btn
+        className="local"
+        onClick={props.localEmployees}  
+      >Local</Btn>
+      <Btn 
+        className="remote"
+        onClick={props.remoteEmplyees}
+      >Remote</Btn>
     </div>
   </div>
 }
