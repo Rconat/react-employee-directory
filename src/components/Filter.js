@@ -29,7 +29,7 @@ const Filter = props => {
       >Local</Btn>
       <Btn 
         className="remote"
-        onClick={props.remoteEmplyees}
+        onClick={props.remoteEmployees}
       >Remote</Btn>
     </div>
   </div>
