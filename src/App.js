@@ -9,6 +9,7 @@ import Sort from './components/Sort'
 import Grid from './components/Grid'
 import Employees from './components/Employees'
 import GridHeader from './components/GridHeader';
+import ShowAll from './components/ShowAll'
 
 // https://randomuser.me/api/?results=25
 // this is the api call for 25 random users
@@ -86,6 +87,11 @@ class App extends Component {
     this.setState({ displayedResults: eByGender })
   }
 
+  // on click show all employees
+  showAllEmployees = (evt) => {
+    this.setState({ displayedResults: this.state.results })
+  }
+
   render() {
 
     console.log(this.state.results)
@@ -99,6 +105,9 @@ class App extends Component {
                 employeesByName={this.employeesByName}
                 employeesByAge={this.employeesByAge}
                 employeesByGender={this.employeesByGender}
+              />
+              <ShowAll 
+                showAllEmployees={this.showAllEmployees}
               />
               <Filter 
                 localEmployees={this.localEmployees}

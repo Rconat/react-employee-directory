@@ -5,7 +5,7 @@ const GridDiv = styled.div`
     width: 90%;
     margin: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr; 
     grid-gap: 20px;
     margin-top: 50px;
     margin-bottom: 50px;
