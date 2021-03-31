@@ -17,15 +17,24 @@ padding: 4px;
 }
 `
 
-const Sort = () => {
+const Sort = (props) => {
     return <div className="wrapper">
     <div className="header">
       <div className="title">Sort by</div>
     </div>
     <div className="btn-div">
-      <Btn className="name">Name</Btn>
-      <Btn className="age">Age</Btn>
-      <Btn className="gender">Gender</Btn>
+      <Btn 
+        className="name"
+        onClick={props.employeesByName}
+      >Name</Btn>
+      <Btn 
+        className="age"
+        onClick={props.employeesByAge}
+      >Age</Btn>
+      <Btn 
+        className="gender"
+        onClick={props.employeesByGender}
+      >Gender</Btn>
     </div>
   </div>
 }

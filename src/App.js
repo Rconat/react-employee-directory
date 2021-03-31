@@ -43,6 +43,49 @@ class App extends Component {
     this.setState({ displayedResults: remotes })
   }
 
+  // on click sort the results by last name
+  employeesByName = (evt) => {
+    const eByName = this.state.results.sort(function(a, b) {
+      var nameA = a.name.last;
+      var nameB = b.name.last;
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+      return 0;
+    })
+    console.log(eByName)
+    this.setState({ displayedResults: eByName })
+  }
+
+  // on click sort the results by age
+  employeesByAge = (evt) => {
+    const eByAge = this.state.results.sort(function(a, b) {
+      return a.dob.age - b.dob.age
+    })
+    console.log(eByAge)
+    this.setState({ displayedResults: eByAge })
+  }
+
+  // on click sort the results by gender
+  employeesByGender = (evt) => {
+    const eByGender = this.state.results.sort(function(a, b) {
+      var genderA = a.gender;
+      var genderB = b.gender;
+      if (genderA < genderB) {
+        return -1;
+      }
+      if (genderA > genderB) {
+        return 1;
+      }
+      return 0;
+    })
+    console.log(eByGender)
+    this.setState({ displayedResults: eByGender })
+  }
+
   render() {
 
     console.log(this.state.results)
@@ -52,7 +95,11 @@ class App extends Component {
         <Header />
           <header className="App-header">
             <Grid>
-              <Sort />
+              <Sort 
+                employeesByName={this.employeesByName}
+                employeesByAge={this.employeesByAge}
+                employeesByGender={this.employeesByGender}
+              />
               <Filter 
                 localEmployees={this.localEmployees}
                 remoteEmployees={this.remoteEmployees}
