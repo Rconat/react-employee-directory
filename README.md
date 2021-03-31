@@ -22,9 +22,9 @@ You can find the repo on [GitHub](https://github.com/Rconat/react-employee-direc
 
 ## Installation
 
-This application requires axios and styled-components. Install them with the following code.
+This application requires axios and styled-components. Install all of the required packages using the following code:
 
-    npm i axios styled-components
+    npm install
 
 ## List of Files
 
@@ -62,7 +62,7 @@ This application uses the Random User API. This API allows us to generate random
 
 ## Usage 
 
-This application is available to any user who wishes to make an Employee Directory for their own company. Since they application uses fake data with the Random User API, it does not have any use outside of giving a basic structure and layout as well as functionality that someone may want to impliment into their own Employee Directory. Instead of calling out to the Random User API, they would be able to do a call to a database of employees on a company server but keep the same functionality for an easy repurpose of the source code. 
+This application is available to any user who wishes to make an Employee Directory for their own company. Since they application uses fake data with the Random User API, it does not have any use outside of giving a basic structure and layout as well as functionality that someone may want to impliment into their own Employee Directory. Instead of calling out to the Random User API, they would be able to do a call to a database of employees on a company server but keep the same functionality for an easy repurpose of the source code. The functionality included in this application is to sort by name, age, or gender as well as filtering by local employees (employees whose location is in the United States) or remote employees (anyone outside of the United States).
 
 ## Credits
 
